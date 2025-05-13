@@ -7,7 +7,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/navigation";
 import { Eye, EyeOff } from "lucide-react";
-import { login, checkAuth } from "./utils/auth";
+import { login } from "./utils/auth";
 import { useUser } from "./context/UserContext";
 
 const validationSchema = Yup.object().shape({
@@ -20,21 +20,13 @@ const HomePage = () => {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
-  const { setUser } = useUser();
+  const { user, setUser } = useUser();
 
-   useEffect(() => {
-    const authenticateUser = async () => {
-      const { authenticated } = await checkAuth();
-      if (authenticated) {
-        router.push("/Dashboard");
-      } else {
-        router.push("/");
-      }
-    };
+  useEffect(() => {
+    if (user) 
+      router.push("/Dashboard"); 
+  }, [user, router]);
 
-    authenticateUser();
-  }, []);
-  
   const formik = useFormik({
     initialValues: {
       email: "",

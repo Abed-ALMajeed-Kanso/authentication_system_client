@@ -76,27 +76,4 @@ const logout = async (setUser: (user: ProfileData | null) => void) => {
   }
 };
 
-// Check authentication status
-const checkAuth = async (): Promise<{ authenticated: boolean; user?: ProfileData }> => {
-  try {
-    const res = await api.get("/check-auth");
-
-   if (res.status === 200 && res.data.user) {
-      return {
-        authenticated: true,
-        user: res.data.user,
-      };
-    } else {
-      return {
-        authenticated: false,
-      };
-    }
-  } catch (error) {
-    console.error("Error checking auth:", error);
-    return {
-      authenticated: false,
-    };
-  }
-};
-
-export { login, logout, fetchProfile, checkAuth, saveUser };
+export { login, logout, fetchProfile, saveUser };
