@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Button from "@elements/Button";
-import TextBox from "@elements/TextBox";
+import Button from "../components/elements/Button";
+import TextBox from "../components/elements/TextBox";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/navigation";

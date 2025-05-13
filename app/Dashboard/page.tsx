@@ -3,8 +3,8 @@
 import React, { useEffect  } from "react";
 import { useRouter } from "next/navigation";
 import { useUser } from "../context/UserContext";
-import Button from "@elements/Button";
-import TextBox from "@elements/TextBox"; 
+import Button from "../../components/elements/Button";
+import TextBox from "../../components/elements/TextBox"; 
 import { logout } from "../utils/auth"; 
 
 const Dashboard = () => {
