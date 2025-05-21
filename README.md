@@ -4,6 +4,6 @@ with the backend API, handling user authentication, profile management, and dyna
 Deployed on Vercel on the following link: https://authentication-system-client.vercel.app
 
 Login Details:
-Email: karlDoe@gmail.com
+Email: karlDoe@gmail.com <br>
 Password: Password123@#
 
