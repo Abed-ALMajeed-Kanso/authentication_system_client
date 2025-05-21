@@ -7,3 +7,5 @@ Login Details:
 Email: karlDoe@gmail.com <br>
 Password: Password123@#
 
+Note: The server is hosted on Render’s free tier, which may enter a sleep mode when inactive. 
+If the application gave errors, please contact me to refresh it (it needs a rebuild sometimes).
